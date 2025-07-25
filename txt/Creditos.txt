@@ -1,0 +1,9 @@
+Ft coin 
+Version beta 1.1
+Made by:
+Antonio Carlos Rosendo da Silva
+Eduardo Castro Brito
+Fabio Cury Pagliuca
+Thiago Gonçalves Dos Santos
+Helped by:
+Dr. Andre F. de Angelis

@@ -1,0 +1,89 @@
+=======================================================
+           Guia de Ajuda do Sistema FTCoin
+=======================================================
+
+Bem-vindo ao Sistema FTCoin, sua plataforma para gerenciar
+carteiras de uma moeda virtual hipotetica!
+Este guia o ajudara a navegar pelas principais funcionalidades.
+
+-------------------------------------------------------
+1. Menu Principal
+-------------------------------------------------------
+Ao iniciar o programa, voce vera o Menu Principal, que oferece
+as seguintes opcoes:
+  - [1] Carteira: Acesse o submenu para gerenciar suas carteiras.
+  - [2] Movimentacao: Registre transacoes de compra ou venda de moedas.
+  - [3] Relatorios: Acesse diversas analises e listagens de dados.
+  - [4] Ajuda: Exibe este guia detalhado.
+  - [5] Sair: Encerra o programa.
+Para selecionar uma opcao, digite o numero correspondente e pressione Enter.
+
+-------------------------------------------------------
+2. Submenu Carteira
+-------------------------------------------------------
+Este submenu permite que voce crie, consulte, edite e exclua carteiras.
+  - [1] Registrar nova carteira:
+    * Voce sera solicitado a digitar um ID unico para a carteira e o nome do titular.
+    * O ID deve ser um numero inteiro. Tente usar IDs que nao foram utilizados.
+    * O saldo inicial de uma nova carteira eh sempre 0 moedas.
+  - [2] Consultar carteira por ID:
+    * Informe o ID da carteira que deseja visualizar.
+    * Serao exibidos o ID, o nome do titular e o saldo atual da carteira.
+  - [3] Editar carteira:
+    * Digite o ID da carteira que deseja modificar.
+    * Atualmente, voce pode alterar o nome do titular da carteira.
+  - [4] Excluir carteira:
+    * Informe o ID da carteira que deseja remover do sistema.
+    * Cuidado: Esta operacao eh irreversivel e remove a carteira e sua associacao direta.
+  - [5] Voltar ao Menu Principal: Retorna a tela inicial do programa.
+
+-------------------------------------------------------
+3. Menu Movimentacao
+-------------------------------------------------------
+Nesta secao, voce pode registrar transacoes de compra ou venda
+da moeda virtual para uma carteira especifica.
+Cada movimentacao recebe um ID unico gerado automaticamente pelo sistema
+e registra o preco da moeda no momento da transacao (via oraculo).
+  - ID da carteira: Informe o ID da carteira que realizara a operacao.
+  - Tipo (C = Compra, V = Venda): Digite 'C' para compra ou 'V' para venda.
+    * Compra: Adiciona moedas ao saldo da carteira.
+    * Venda: Remove moedas do saldo da carteira. Sera verificada a existencia de saldo suficiente.
+  - Quantidade de moedas: Digite a quantidade de moedas a ser transacionada.
+  - Preco (Oraculo): O sistema consultara um oraculo (valor fixo de 1.0 por enquanto)
+    para registrar o preco unitario da moeda no momento da transacao.
+
+-------------------------------------------------------
+4. Menu Relatorios
+-------------------------------------------------------
+Esta secao oferece diversas formas de visualizar os dados do sistema.
+  - [1] Listar carteiras (por ID):
+    * Exibe uma lista de todas as carteiras registradas, ordenadas pelo Identificador (ID).
+  - [2] Listar carteiras (por Titular):
+    * Exibe uma lista de todas as carteiras, ordenadas alfabeticamente pelo nome do Titular.
+  - [3] Saldo da carteira:
+    * Permite que voce consulte o saldo atual de moedas de uma carteira especifica.
+    * Voce precisara informar o ID da carteira desejada.
+  - [4] Historico da carteira:
+    * Exibe todas as movimentacoes (compras e vendas) registradas para uma carteira especifica.
+    * Inclui ID da movimentacao, tipo, quantidade, preco unitario, valor total e data/hora.
+  - [5] Ganho/Perda por carteira:
+    * Calcula e exibe o ganho ou perda financeiro liquido para cada carteira,
+      baseado no valor total das vendas menos o valor total das compras registradas.
+    * Um valor negativo indica prejuizo (perda), e um valor positivo indica lucro (ganho).
+  - [6] Voltar: Retorna ao Menu Principal.
+
+-------------------------------------------------------
+5. Dicas e Tratamento de Erros
+-------------------------------------------------------
+  - Mensagens de 'Erro:': O sistema utiliza um tratamento de excecoes robusto.
+    Se uma operacao falhar (ex: tentar consultar uma carteira inexistente,
+    adicionar um ID duplicado, ou vender moedas sem saldo suficiente), voce
+    recebera uma mensagem de 'Erro:' indicando o problema.
+  - IDs: Lembre-se dos IDs que voce usa para suas carteiras e movimentacoes.
+    Eles sao cruciais para consultar ou operar com dados especificos.
+  - Entrada de Dados: Sempre digite os numeros e letras conforme solicitado.
+    Valores invalidos podem gerar mensagens de erro ou comportamento inesperado.
+
+=======================================================
+           Fim do Guia de Ajuda
+=======================================================
