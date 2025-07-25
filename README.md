@@ -30,30 +30,21 @@ O FT Coin foi projetado com um sistema de persistência flexível, priorizando a
 - Fallback em Memória (CSV/TXT): Em caso de falha na conexão com o MariaDB, os dados são automaticamente salvos e carregados de arquivos carteiras.csv, movimentacoes.csv e cotacoes.csv, permitindo que o aplicativo continue funcionando.
 
 # Tecnologias Utilizadas
-Linguagem: C++11
-Compilador: g++
-Gerenciamento de Dependências/Compilação: Makefile
-Banco de Dados: MariaDB (via MariaDB Connector/C++)
-Persistência Local: Arquivos .csv / .txt
+- Linguagem: C++11
+- Compilador: g++
+- Gerenciamento de Dependências/Compilação: Makefile
+- Banco de Dados: MariaDB (via MariaDB Connector/C++)
+- Persistência Local: Arquivos .csv / .txt
 
 # Como Compilar e Executar
-Pré-requisitos:
-Um compilador C++ (g++ recomendado) com suporte a C++11.
-MariaDB Connector/C++ instalado e suas bibliotecas e cabeçalhos acessíveis (geralmente em /usr/include e /usr/lib/x86_64-linux-gnu).
-
-# Clonar o Repositório:
-git clone https://github.com/antoniorosendo/FT-Coin
-cd ftcoin
-
-# Compilar:
 Utilize o Makefile fornecido para compilar o projeto. Os arquivos objeto (.o) serão gerados na subpasta build/.
 
+Pré-requisitos:
+- Um compilador C++ (g++ recomendado) com suporte a C++11.
+- MariaDB Connector/C++ instalado e suas bibliotecas e cabeçalhos acessíveis (geralmente em /usr/include e /usr/lib/x86_64-linux-gnu).
+
 # Executar:
-Após a compilação bem-sucedida, o executável ftcoin será criado no diretório raiz do projeto.
-
-./ftcoin
-
-O programa tentará se conectar ao MariaDB. Se a conexão falhar, ele informará e usará a persistência em memória (criando ou lendo os arquivos CSV no diretório de execução, ou em data/ se configurado).
+Após a compilação bem-sucedida, o executável ftcoin será criado no diretório raiz do projeto. O programa tentará se conectar ao MariaDB. Se a conexão falhar, ele informará e usará a persistência em memória (criando ou lendo os arquivos CSV no diretório de execução, ou em data/ se configurado).
 
 # Estrutura do Projeto
 - src/: Contém os arquivos .cpp e .hpp do projeto.
