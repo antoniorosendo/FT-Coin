@@ -1,0 +1,1 @@
+g++ -std=c++11 -o ftcoin Main.cpp Controller.cpp Menu.cpp Carteira.cpp Date.cpp Entry.cpp EntryDBDAO.cpp InMemoryEntryDAO.cpp ServerDBConnection.cpp SistemaFTCoin.cpp SysInfo.cpp TextFromFile.cpp Utils.cpp -I/usr/include -L/usr/lib/x86_64-linux-gnu -lmariadbcpp -o ftcoin
